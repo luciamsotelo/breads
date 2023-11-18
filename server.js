@@ -22,9 +22,8 @@ app.use("/breads", breadsController);
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+app.use(express.urlencoded({extended: true}))
 
-// MIDDLEWARE
-app.use(express.static('public'))
 
 
 // LISTEN
